@@ -63,7 +63,7 @@ InstaGo | {{ object.get_full_name | title }}
                     <div class="modal-body">
                         {% csrf_token %}
                         <textarea name="bio" id="bio" rows="3"
-                            class="form-control">{{ user.userprofile.bio }}</textarea>
+                            class="form-control">{% if user.userprofile.bio %}{{ user.userprofile.bio }}{% endif %}</textarea>
                     </div>
                     <div class="modal-footer">
                         <button type="submit" class="btn btn-primary">Save.</button>

@@ -19,6 +19,8 @@
             {% include 'partials/blog_card.html' with blog=blog %}
         </div>
     </div>
+    {% else %}
+    <h4 class="text-center">No blogs till now.</h4>
     {% endfor %}
 
     {% include 'partials/blog_paginator.html' with blogs=blogs %}
