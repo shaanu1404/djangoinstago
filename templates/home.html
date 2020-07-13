@@ -19,7 +19,7 @@
             {% include 'partials/blog_card.html' with blog=blog %}
         </div>
     </div>
-    {% else %}
+    {% empty %}
     <h4 class="text-center">No blogs till now.</h4>
     {% endfor %}
 
